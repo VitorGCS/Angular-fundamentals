@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   template: '<p>warning-alert works!</p>',
   styles: [`
     p{
-      color: yellowgreen;
+      padding: 20px;
+      background-color: mistyrose;
+      border: 1px solid red;
     }`
   ]
 })
