@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ RouterTestingModule ],
@@ -30,3 +31,11 @@ describe('AppComponent', () => {
   });
 */
 });
+
+/*
+Angular Testing Quick Start
+  https://www.youtube.com/watch?v=Jv2uxzhPFl4&list=RDCMUCsBjURrPoezykLs9EqgamOA&index=2
+  https://www.youtube.com/watch?v=BumgayeUC08
+  https://www.youtube.com/watch?v=7WSMvufDh7s
+
+ */
