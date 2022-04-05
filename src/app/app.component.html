@@ -1,13 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h3>Assignment - 2</h3>
+      <h3>Assignment - 3</h3>
       <hr>
-<!--      <app-servers></app-servers>-->
+      <!--       <app-servers></app-servers> -->
       <!--
       <app-warning-alert></app-warning-alert>
       <app-success-alert></app-success-alert>
       -->
+      <!--
       <label>UserName</label>
       <input
         type="text"
@@ -19,10 +20,17 @@
         [disabled]="userName === ''"
         (click)="this.userName = '';"
       >Reset UserName</button>
+    -->
+      <button class="btn btn-primary" (click)="onToggleDisplay()">Display Details</button>
+      <p *ngIf="displayContent">'Secret Password = tune'</p>
+      <div
+        *ngFor="let val of log; let i = index"
+        [ngStyle]="{backgroundColor: i >=4 ? 'blue':'transparent'}"
+        [ngClass]="{colorLetter:  i >= 4 }"
+        > 
+        {{val}}
+      </div>
 
     </div>
   </div>
 </div>
-
-
-
