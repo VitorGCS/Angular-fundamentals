@@ -57,5 +57,4 @@ describe('AlertButtonComponent', () => {
     expect(component.hideContent).toBeFalsy();
   }));
 
-
 });
