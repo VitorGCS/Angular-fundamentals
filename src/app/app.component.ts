@@ -12,3 +12,6 @@ export class AppComponent {
 // ng test
 // ng test --code-coverage
 // ng test --no-watch --code-coverage
+
+
+// https://testing-angular.com/target-audience/#target-audience
