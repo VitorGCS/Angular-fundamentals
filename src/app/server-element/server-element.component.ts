@@ -1,4 +1,13 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {
+  Component,
+  ContentChild,
+  ElementRef,
+  Input,
+  OnInit,
+  SimpleChanges,
+  ViewChild,
+  ViewEncapsulation
+} from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -9,9 +18,27 @@ import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 export class ServerElementComponent implements OnInit {
    @Input('srvElement') element: {type: string, name:string, content:string};
 
-  constructor() { }
+   @ViewChild('heading', {static:true}) header: ElementRef;
+   @ContentChild('contentParagraph', {static:true}) paragraph: ElementRef;
 
-  ngOnInit(): void {
+  constructor() {
+    console.log('constructor called');
   }
 
+  ngOnChanges(changes: SimpleChanges){
+    console.log('ngOnChanges called');
+    console.log('Changes'+ changes);
+
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit called');
+    console.log('The viewChild'+ this.header.nativeElement.textContent);
+    console.log('The contentChild'+ this.paragraph.nativeElement.textContent);
+  }
+
+  ngAfterContentInit(): void {
+    console.log('ngAfterContentInit called');
+    console.log('The contentChild'+ this.paragraph.nativeElement.textContent);
+  }
 }
